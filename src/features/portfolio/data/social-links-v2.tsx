@@ -1,0 +1,30 @@
+import { Icons } from "@/components/icons"
+import type { SocialLink } from "@/features/portfolio/types/social-links-v2"
+
+export const SOCIAL_LINKS: SocialLink[] = [
+  {
+    name: "github",
+    icon: <Icons.github />,
+    title: "GitHub",
+    handle: "rektyrowdyy",
+    href: "https://github.com/rektyrowdyy",
+  },
+  {
+    name: "x",
+    icon: <Icons.x />,
+    title: "X",
+    handle: "@rektyrowdyy",
+    href: "https://x.com/rektyrowdyy",
+  },
+  {
+    name: "linkedin",
+    icon: <Icons.linkedin />,
+    title: "LinkedIn",
+    handle: "hridya-dham-7727ba232",
+    href: "https://www.linkedin.com/in/hridya-dham-7727ba232/",
+  },
+]
+
+export function getSocialLinkByName(name: string) {
+  return SOCIAL_LINKS.find((link) => link.name === name)
+}
