@@ -8,6 +8,10 @@ const ScrollToTop = dynamic(() =>
   import("@/components/scroll-to-top").then((mod) => mod.ScrollToTop)
 )
 
+const CalFloatingButton = dynamic(() =>
+  import("@/components/cal-floating-button").then((mod) => mod.CalFloatingButton)
+)
+
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="group/layout">
@@ -23,6 +27,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       </div>
       <SiteBottomNav />
       <ScrollToTop />
+      <CalFloatingButton />
     </div>
   )
 }
