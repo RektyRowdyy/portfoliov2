@@ -30,7 +30,7 @@ See `.env.local`. The critical one is `GITHUB_API_TOKEN` — without it the GitH
 
 ## Project management — Linear
 
-All work tracked in **Linear** → Project: **"The Switch"** → Milestone: **"Portofolio"** (note: typo in Linear, that's the actual name).
+All work tracked in **Linear** → Project: **"The Switch"** → Milestone: **"Portfolio"** (note: typo in Linear, that's the actual name).
 
 ### Active tickets
 
