@@ -1,6 +1,12 @@
 import Image from "next/image"
 import { addQueryParams } from "@/utils/url"
-import { BoxIcon, InfinityIcon, LinkIcon } from "lucide-react"
+import {
+  BoxIcon,
+  CloudIcon,
+  DatabaseIcon,
+  InfinityIcon,
+  LinkIcon,
+} from "lucide-react"
 
 import { UTM_PARAMS } from "@/config/site"
 import { Tag } from "@/components/ui/tag"
@@ -27,6 +33,14 @@ const SKILL_ICON_MAP: Record<string, string> = {
   TypeScript: "typescript",
   "React Native": "react",
   Go: "go",
+}
+
+// AWS and NoSQL have no official icon on simpleicons.org (AWS is excluded
+// for trademark reasons; NoSQL isn't a single brand), so fall back to a
+// generic lucide icon for these.
+const SKILL_FALLBACK_ICON_MAP: Record<string, typeof CloudIcon> = {
+  AWS: CloudIcon,
+  NoSQL: DatabaseIcon,
 }
 
 export function ProjectItem({
@@ -126,10 +140,11 @@ export function ProjectItem({
             <ul className="flex flex-wrap gap-1.5">
               {project.skills.map((skill, index) => {
                 const iconKey = SKILL_ICON_MAP[skill]
+                const FallbackIcon = SKILL_FALLBACK_ICON_MAP[skill]
                 return (
                   <li key={index} className="flex">
                     <Tag className="gap-1.5">
-                      {iconKey && (
+                      {iconKey ? (
                         <Image
                           src={`https://cdn.simpleicons.org/${iconKey}`}
                           alt={`${skill} icon`}
@@ -137,6 +152,8 @@ export function ProjectItem({
                           height={14}
                           unoptimized
                         />
+                      ) : (
+                        FallbackIcon && <FallbackIcon className="size-3.5" />
                       )}
                       {skill}
                     </Tag>
