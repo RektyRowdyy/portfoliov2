@@ -3,13 +3,6 @@ import type { SocialLink } from "@/features/portfolio/types/social-links-v2"
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    name: "github",
-    icon: <Icons.github />,
-    title: "GitHub",
-    handle: "rektyrowdyy",
-    href: "https://github.com/rektyrowdyy",
-  },
-  {
     name: "x",
     icon: <Icons.x />,
     title: "X",

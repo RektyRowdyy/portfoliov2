@@ -16,18 +16,18 @@ export const USER: User = {
   address: "Dehradun, India",
   phoneNumberB64: "KzkxLTk3MTExNjI1MTQ=",
   emailB64: "aHJpZHlhZGhhbUBnbWFpbC5jb20=",
-  website: "https://hridyadham.com",
+  website: "https://github.com/RektyRowdyy",
   jobTitle: "Full Stack Engineer",
   jobs: [
     {
-      title: "Solutions Architect",
+      title: "Tech Lead",
       company: "myEZcare",
       website: "https://myezcare.com",
       experienceId: "current-company",
     },
   ],
   about: `
-- I'm Hridya Dham — a Full Stack Engineer passionate about building clean, well-crafted software.
+I'm Hridya Dham, a Full Stack Engineer based in Dehradun, India. I like owning problems end-to-end, from building healthcare SaaS products in .NET and Angular to standing up the Kubernetes, CI/CD, and observability infrastructure that keeps them running, which has grown into leading engineering teams and being the technical point of contact for clients. Currently Tech Lead at myEZcare.
 `,
   avatar: "/images/avatar.jpg",
   avatarVariants: {

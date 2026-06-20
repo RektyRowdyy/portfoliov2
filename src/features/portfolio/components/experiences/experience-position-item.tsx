@@ -1,11 +1,20 @@
 import Image from "next/image"
-
 import { differenceInMonths, parse } from "date-fns"
 import { BriefcaseBusinessIcon, InfinityIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Separator } from "@/components/ui/separator"
 import { Prose } from "@/components/ui/typography"
+import {
+  Collapsible,
+  CollapsibleChevronsUpDownIcon,
+} from "@/components/base/collapsible-animated"
+import {
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/base/ui/collapsible"
+import { Markdown } from "@/components/markdown"
+import type { ExperiencePosition } from "@/features/portfolio/types/experiences"
 
 const SKILL_ICON_MAP: Record<string, string> = {
   TypeScript: "typescript",
@@ -17,7 +26,6 @@ const SKILL_ICON_MAP: Record<string, string> = {
   "Tailwind CSS": "tailwindcss",
   ".NET": "dotnet",
   ".NET MVC": "dotnet",
-  Express: "express",
   "Node.js": "nodejs",
   Odoo: "odoo",
   SQL: "sqlite",
@@ -32,17 +40,9 @@ const SKILL_ICON_MAP: Record<string, string> = {
   Kubernetes: "kubernetes",
   Python: "python",
   Claude: "claude",
+  ArgoCD: "argo",
+  n8n: "n8n",
 }
-import {
-  Collapsible,
-  CollapsibleChevronsUpDownIcon,
-} from "@/components/base/collapsible-animated"
-import {
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/base/ui/collapsible"
-import { Markdown } from "@/components/markdown"
-import type { ExperiencePosition } from "@/features/portfolio/types/experiences"
 
 export function ExperiencePositionItem({
   position,

@@ -1,12 +1,7 @@
 import { urlToName } from "@/utils/url"
-import {
-  LinkIcon,
-  MapPinIcon,
-  MarsIcon,
-  NonBinaryIcon,
-  VenusIcon,
-} from "lucide-react"
+import { MapPinIcon, MarsIcon, NonBinaryIcon, VenusIcon } from "lucide-react"
 
+import { Icons } from "@/components/icons"
 import { USER } from "@/features/portfolio/data/user"
 import type { User } from "@/features/portfolio/types/user"
 
@@ -62,12 +57,12 @@ export function Overview() {
 
         <IntroItem>
           <IntroItemIcon>
-            <LinkIcon />
+            <Icons.github />
           </IntroItemIcon>
           <IntroItemContent>
             <IntroItemLink
               href={USER.website}
-              aria-label={`Personal website: ${urlToName(USER.website)}`}
+              aria-label={`GitHub: ${urlToName(USER.website)}`}
             >
               {urlToName(USER.website)}
             </IntroItemLink>

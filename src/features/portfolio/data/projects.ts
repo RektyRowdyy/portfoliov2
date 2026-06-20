@@ -2,24 +2,6 @@ import type { Project } from "../types/projects"
 
 export const PROJECTS: Project[] = [
   {
-    id: "hridyadham-com",
-    title: "hridyadham.com",
-    period: {
-      start: "06.2026",
-    },
-    link: "https://github.com/rektyrowdyy/hridyadham.com",
-    skills: [
-      "Open Source",
-      "Next.js 16",
-      "Tailwind CSS v4",
-      "shadcn/ui",
-      "Motion",
-      "Vercel",
-    ],
-    description: "Personal portfolio website.",
-    isExpanded: true,
-  },
-  {
     id: "eventverse",
     title: "EventVerse",
     logo: "/images/eventverse-logo.png",
@@ -28,10 +10,10 @@ export const PROJECTS: Project[] = [
       end: "06.2026",
     },
     link: "https://app.eventverse.co.in/",
-    skills: [],
+    skills: ["React", "TypeScript", "React Native", "Go", "AWS", "NoSQL"],
     description:
-      "- **Web:** [app.eventverse.co.in](https://app.eventverse.co.in/)\n" +
-      "- **Mobile:** [m.eventverse.co.in](https://m.eventverse.co.in/)",
+      "- Built a role-based event crew management platform connecting organizers with crew members: applicants browse, apply, and track approval status for events, organizers manage events and bulk-approve crew with auto-closing limits, and a three-tier admin panel (SuperAdmin, Admin, Finance) oversees roles, users, and payments.\n" +
+      "- Owned the project end-to-end as a solo freelance engagement, from architecture and database design through the mobile and admin frontend, testing, and Play Store deployment guidance.",
     isExpanded: true,
   },
 ]

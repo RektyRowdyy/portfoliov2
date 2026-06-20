@@ -22,6 +22,13 @@ import { Markdown } from "@/components/markdown"
 
 import type { Project } from "../../types/projects"
 
+const SKILL_ICON_MAP: Record<string, string> = {
+  React: "react",
+  TypeScript: "typescript",
+  "React Native": "react",
+  Go: "go",
+}
+
 export function ProjectItem({
   className,
   project,
@@ -117,11 +124,25 @@ export function ProjectItem({
 
           {project.skills.length > 0 && (
             <ul className="flex flex-wrap gap-1.5">
-              {project.skills.map((skill, index) => (
-                <li key={index} className="flex">
-                  <Tag>{skill}</Tag>
-                </li>
-              ))}
+              {project.skills.map((skill, index) => {
+                const iconKey = SKILL_ICON_MAP[skill]
+                return (
+                  <li key={index} className="flex">
+                    <Tag className="gap-1.5">
+                      {iconKey && (
+                        <Image
+                          src={`https://cdn.simpleicons.org/${iconKey}`}
+                          alt={`${skill} icon`}
+                          width={14}
+                          height={14}
+                          unoptimized
+                        />
+                      )}
+                      {skill}
+                    </Tag>
+                  </li>
+                )
+              })}
             </ul>
           )}
         </div>

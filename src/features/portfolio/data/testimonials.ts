@@ -9,10 +9,21 @@ export const TESTIMONIALS_1: Testimonial[] = [
     url: "#",
     quote: "If you want us working with myEZcare we want you!",
     date: "2026-06-13",
-    isFeatured: true,
+    isFeatured: false,
     order: 1,
   },
 ]
 
 // Short quotes (50 characters or fewer), ordered by date ascending
-export const TESTIMONIALS_2: Testimonial[] = []
+export const TESTIMONIALS_2: Testimonial[] = [
+  {
+    authorAvatar: "/images/avataaars/male/avataaars-1776575767888.svg",
+    authorName: "Piyush",
+    authorTagline: "EventVerse",
+    url: "#",
+    quote: "Best UI design that we've seen.",
+    date: "2026-06-20",
+    isFeatured: false,
+    order: 1,
+  },
+]

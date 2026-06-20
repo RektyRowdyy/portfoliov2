@@ -17,7 +17,7 @@ export function CalFloatingButton() {
           Cal.config = Cal.config || {};
           Cal.config.forwardQueryParams = true;
 
-          Cal.ns["${CAL_NAMESPACE}"]("floatingButton", {"calLink":"${CAL_LINK}","config":{"layout":"week_view","useSlotsViewOnSmallScreen":"true","theme":"auto"},"buttonText":"Book my Cal?","hideButtonIcon":false});
+          Cal.ns["${CAL_NAMESPACE}"]("floatingButton", {"calLink":"${CAL_LINK}","config":{"layout":"week_view","useSlotsViewOnSmallScreen":"true","theme":"auto"},"buttonText":"Book my Cal?","hideButtonIcon":false,"buttonPosition":"bottom-left"});
           Cal.ns["${CAL_NAMESPACE}"]("ui", {"hideEventTypeDetails":false,"layout":"week_view"});
         `,
       }}

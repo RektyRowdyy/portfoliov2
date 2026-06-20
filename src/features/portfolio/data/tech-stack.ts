@@ -49,12 +49,6 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Backend"],
   },
   {
-    key: "express",
-    title: "Express",
-    href: "https://expressjs.com/",
-    categories: ["Backend"],
-  },
-  {
     key: "odoo",
     title: "Odoo",
     href: "https://www.odoo.com/",
@@ -96,6 +90,12 @@ export const TECH_STACK: TechStack[] = [
     key: "opencode",
     title: "OpenCode",
     href: "https://opencode.ai/",
+    categories: ["Dev Tools"],
+  },
+  {
+    key: "argo",
+    title: "ArgoCD",
+    href: "https://argo-cd.readthedocs.io/",
     categories: ["Dev Tools"],
   },
 ]
