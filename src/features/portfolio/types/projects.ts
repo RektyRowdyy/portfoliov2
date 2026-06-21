@@ -12,8 +12,12 @@ export type Project = {
     /** End date; leave undefined for "Present". */
     end?: string
   }
-  /** Public URL (site, repository, demo, or video). */
-  link: string
+  /** One or more public URLs (site, repository, demo, mobile app, etc.), each rendered as its own icon link. */
+  links: Array<{
+    /** Determines which icon is shown. */
+    type: "web" | "mobile" | "github" | "demo" | "link"
+    url: string
+  }>
   /** Tags/technologies for chips or filtering. */
   skills: string[]
   /** Optional rich description; Markdown and line breaks supported. */

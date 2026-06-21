@@ -6,9 +6,12 @@ import {
   DatabaseIcon,
   InfinityIcon,
   LinkIcon,
+  MonitorIcon,
+  SmartphoneIcon,
 } from "lucide-react"
 
 import { UTM_PARAMS } from "@/config/site"
+import { Icons } from "@/components/icons"
 import { Tag } from "@/components/ui/tag"
 import { Prose } from "@/components/ui/typography"
 import {
@@ -41,6 +44,25 @@ const SKILL_ICON_MAP: Record<string, string> = {
 const SKILL_FALLBACK_ICON_MAP: Record<string, typeof CloudIcon> = {
   AWS: CloudIcon,
   NoSQL: DatabaseIcon,
+}
+
+const PROJECT_LINK_ICON_MAP = {
+  web: MonitorIcon,
+  mobile: SmartphoneIcon,
+  github: Icons.github,
+  demo: LinkIcon,
+  link: LinkIcon,
+} as const
+
+const PROJECT_LINK_LABEL_MAP: Record<
+  keyof typeof PROJECT_LINK_ICON_MAP,
+  string
+> = {
+  web: "Open Web App",
+  mobile: "Open Mobile App",
+  github: "Open GitHub Repo",
+  demo: "Open Demo",
+  link: "Open Project Link",
 }
 
 export function ProjectItem({
@@ -102,24 +124,32 @@ export function ProjectItem({
               </dl>
             </div>
 
-            <Tooltip>
-              <TooltipTrigger
-                render={
-                  <a
-                    className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
-                    href={addQueryParams(project.link, UTM_PARAMS)}
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="Open Project Link"
-                  >
-                    <LinkIcon className="pointer-events-none size-4" />
-                  </a>
-                }
-              />
-              <TooltipContent>
-                <p>Open Project Link</p>
-              </TooltipContent>
-            </Tooltip>
+            <div className="flex shrink-0 items-center gap-1">
+              {project.links.map((link) => {
+                const Icon = PROJECT_LINK_ICON_MAP[link.type]
+                const label = PROJECT_LINK_LABEL_MAP[link.type]
+                return (
+                  <Tooltip key={link.url}>
+                    <TooltipTrigger
+                      render={
+                        <a
+                          className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
+                          href={addQueryParams(link.url, UTM_PARAMS)}
+                          target="_blank"
+                          rel="noopener"
+                          aria-label={label}
+                        >
+                          <Icon className="pointer-events-none size-4" />
+                        </a>
+                      }
+                    />
+                    <TooltipContent>
+                      <p>{label}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                )
+              })}
+            </div>
 
             <div className="shrink-0 text-muted-foreground [&_svg]:size-4">
               <CollapsibleChevronsUpDownIcon duration={0.15} />
