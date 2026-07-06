@@ -3,9 +3,9 @@
 import { use } from "react"
 import { addQueryParams } from "@/utils/url"
 import { format } from "date-fns"
-import { LoaderIcon } from "lucide-react"
 
 import { GITHUB_USERNAME, UTM_PARAMS } from "@/config/site"
+import { Skeleton } from "@/components/ui/skeleton"
 import {
   Tooltip,
   TooltipContent,
@@ -93,9 +93,5 @@ export function GitHubContributionGraph({
 }
 
 export function GitHubContributionFallback() {
-  return (
-    <div className="flex h-46.5 w-full items-center justify-center">
-      <LoaderIcon className="animate-spin text-muted-foreground" />
-    </div>
-  )
+  return <Skeleton className="mx-auto my-4 h-38.5 w-full rounded-md" />
 }
