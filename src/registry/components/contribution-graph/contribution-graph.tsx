@@ -6,7 +6,9 @@ import {
   createContext,
   Fragment,
   useContext,
+  useLayoutEffect,
   useMemo,
+  useRef,
   type CSSProperties,
   type HTMLAttributes,
   type ReactNode,
@@ -379,8 +381,18 @@ export const ContributionGraphCalendar = ({
     [weeks, labels.months]
   )
 
+  // Start scrolled to the most recent week (current date) on mount.
+  const scrollRef = useRef<HTMLDivElement>(null)
+  useLayoutEffect(() => {
+    const el = scrollRef.current
+    if (el) {
+      el.scrollLeft = el.scrollWidth
+    }
+  }, [])
+
   return (
     <div
+      ref={scrollRef}
       className={cn("max-w-full overflow-x-auto overflow-y-hidden", className)}
       {...props}
     >
