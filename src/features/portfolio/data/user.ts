@@ -20,14 +20,14 @@ export const USER: User = {
   jobTitle: "Full Stack Engineer",
   jobs: [
     {
-      title: "Tech Lead",
+      title: "Lead Software Developer",
       company: "myEZcare",
       website: "https://myezcare.com",
       experienceId: "current-company",
     },
   ],
   about: `
-I'm Hridya Dham, a Full Stack Engineer based in Dehradun, India. I like owning problems end-to-end, from building healthcare SaaS products in .NET and Angular to standing up the Kubernetes, CI/CD, and observability infrastructure that keeps them running, which has grown into leading engineering teams and being the technical point of contact for clients. Currently Tech Lead at myEZcare.
+I'm Hridya Dham, a Full Stack Engineer based in Dehradun, India. I like owning problems end-to-end, from building healthcare SaaS products in .NET and Angular to standing up the Kubernetes, CI/CD, and observability infrastructure that keeps them running, which has grown into leading engineering teams and being the technical point of contact for clients. Currently Lead Software Developer at myEZcare.
 `,
   avatar: "/images/avatar.jpg",
   avatarVariants: {

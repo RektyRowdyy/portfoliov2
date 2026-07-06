@@ -1,3 +1,5 @@
+import { FileIcon } from "lucide-react"
+
 import { Icons } from "@/components/icons"
 import type { SocialLink } from "@/features/portfolio/types/social-links-v2"
 
@@ -15,6 +17,13 @@ export const SOCIAL_LINKS: SocialLink[] = [
     title: "LinkedIn",
     handle: "hridya-dham-7727ba232",
     href: "https://www.linkedin.com/in/hridya-dham-7727ba232/",
+  },
+  {
+    name: "resume",
+    icon: <FileIcon />,
+    title: "Resume",
+    handle: "Resume",
+    href: "https://drive.google.com/file/d/1xrcKHU0D_8JzhU4eZ0eNQ7XdKgVglQSZ/view?usp=sharing",
   },
 ]
 

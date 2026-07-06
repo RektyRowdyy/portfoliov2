@@ -13,10 +13,10 @@ export const PROJECTS: Project[] = [
       { type: "web", url: "https://app.eventverse.co.in" },
       { type: "mobile", url: "https://m.eventverse.co.in" },
     ],
-    skills: ["React", "TypeScript", "React Native", "Go", "AWS", "NoSQL"],
+    skills: ["React", "TypeScript", "React Native"],
     description:
-      "- Built a role-based event crew management platform connecting organizers with crew members: applicants browse, apply, and track approval status for events, organizers manage events and bulk-approve crew with auto-closing limits, and a three-tier admin panel (SuperAdmin, Admin, Finance) oversees roles, users, and payments.\n" +
-      "- Owned the project end-to-end as a solo freelance engagement, from architecture and database design through the mobile and admin frontend, testing, and Play Store deployment guidance.",
+      "- Built a role-based event crew management platform as part of a 3-person team: organizers post events and bulk-approve crew with auto-closing limits, applicants track approval status, and a three-tier admin panel (SuperAdmin, Admin, Finance) manages roles, users, and payments.\n" +
+      "- Owned architecture and the full cross-platform frontend: a React Native mobile app, a React admin panel, PWA integration, and deployment to both the Play Store and App Store.",
     isExpanded: true,
   },
 ]

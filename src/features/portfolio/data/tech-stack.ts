@@ -20,6 +20,18 @@ export const TECH_STACK: TechStack[] = [
     href: "https://en.wikipedia.org/wiki/SQL",
     categories: ["Languages"],
   },
+  {
+    key: "go",
+    title: "Go",
+    href: "https://go.dev/",
+    categories: ["Languages"],
+  },
+  {
+    key: "python",
+    title: "Python",
+    href: "https://www.python.org/",
+    categories: ["Languages"],
+  },
 
   // Frontend
   {
@@ -53,6 +65,26 @@ export const TECH_STACK: TechStack[] = [
     title: "Odoo",
     href: "https://www.odoo.com/",
     categories: ["Backend"],
+  },
+  {
+    key: "nodedotjs",
+    title: "Node.js",
+    href: "https://nodejs.org/",
+    categories: ["Backend"],
+  },
+  {
+    key: "express",
+    title: "Express.js",
+    href: "https://expressjs.com/",
+    categories: ["Backend"],
+  },
+
+  // Databases
+  {
+    key: "mongodb",
+    title: "MongoDB",
+    href: "https://www.mongodb.com/",
+    categories: ["Databases"],
   },
 
   // Dev Tools
@@ -96,6 +128,24 @@ export const TECH_STACK: TechStack[] = [
     key: "argo",
     title: "ArgoCD",
     href: "https://argo-cd.readthedocs.io/",
+    categories: ["Dev Tools"],
+  },
+  {
+    key: "n8n",
+    title: "n8n",
+    href: "https://n8n.io/",
+    categories: ["Dev Tools"],
+  },
+  {
+    key: "keycloak",
+    title: "Keycloak",
+    href: "https://www.keycloak.org/",
+    categories: ["Dev Tools"],
+  },
+  {
+    key: "opentelemetry",
+    title: "OpenTelemetry",
+    href: "https://opentelemetry.io/",
     categories: ["Dev Tools"],
   },
 ]
