@@ -23,7 +23,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
     icon: <FileIcon />,
     title: "Resume",
     handle: "Resume",
-    href: "https://drive.google.com/file/d/1xrcKHU0D_8JzhU4eZ0eNQ7XdKgVglQSZ/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1NZcenpr981qDhbQQAdIyMBJ8dBIvqxeC/view?usp=sharing",
   },
 ]
 
